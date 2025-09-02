@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-<body class="bg-slate-900 text-gray-800">
+<body class="bg-slate-900 text-gray-800 hover:cursor-default">
 
     <div class="container mx-auto">
 
@@ -23,7 +23,7 @@
 
             <nav id="quick-links" class="">
                 <ul>
-                    <li class="text-xl font-bold"><a target="_blank" href="https://github.com/ARK-dev-tech">GitHub</a>
+                    <li class="text-xl font-bold hover:text-blue-700"><a target="_blank" href="https://github.com/ARK-dev-tech">GitHub</a>
                     </li>
                 </ul>
             </nav>
@@ -82,11 +82,13 @@
         </section>
 
         <!--SKILLS-->
-        <section id="skills" class="mb-50">
+        <section id="skills" class="px-4 py-4 mb-10">
 
             <h2 class="text-white text-3xl font-bold text-center mb-10">My Skills</h2>
+            
+            <!--Note Add responsive for mobile-->
+            <div class="skill-cards grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
 
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
                 <div class="bg-white p-4 rounded-lg shadow-sm">
                     <i class="fab fa-html5 text-orange-500 text-3xl mb-2"></i>
                     <p>HTML5</p>
@@ -109,12 +111,32 @@
         </section>
 
         <!--CONTACT-->
+        <section class="px-6 py-16 text-center">
 
+            <h2 class="text-3xl text-white font-bold mb-8">Contact Me</h2>
+            
+            <!--Note Add responsive for mobile-->
+            <div class="max-w-md mx-auto">
+                <a 
+                    target="_blank" 
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=official.ark.dev@gmail.com"
+                    class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 inline-block">
+                    <i class="fas fa-envelope mr-2"></i>
+                    Email Me
+                </a>
+            </div>
+        </section>
 
-        <!--FOOTER-->
-
+       
+        
 
     </div>
+
+    <!--FOOTER-->
+    <footer class="bg-gray-800 text-white py-8 text-center">
+        <p>Copyright &copy; 2025 Abdul Rafay Khan</p>
+        <p>ARK.dev.tech</p>
+    </footer>
 </body>
 
 </html>
