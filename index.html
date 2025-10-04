@@ -4,91 +4,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Web Developer</title>
+    <title>Abdul Rafay Khan - Web Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" crossorigin href="/Portfolio-Website/assets/index-CgJEdhVA.css">
+    <style>
+        /* Custom styles for mobile menu */
+        #mobile-menu {
+            transition: all 0.3s ease;
+        }
+    </style>
 </head>
 
 <body class="bg-slate-900 text-gray-800 hover:cursor-default">
 
-    <div class="container mx-auto">
+    <div class="container mx-auto px-4 md:px-0">
 
         <!--MAIN HEADER-->
-        <header id="main-header" class="bg-white shadow-lg px-6 py-4 rounded-full flex justify-between">
-
+        <header id="main-header" class="bg-white shadow-lg px-4 md:px-6 py-4 rounded-full flex justify-between items-center">
             <div id="nameplate" class="">
-                <h1 class="text-xl font-bold">Abdul Rafay Khan</h1>
+                <h1 class="text-lg md:text-xl font-bold">Abdul Rafay Khan</h1>
             </div>
 
-            <nav id="quick-links" class="">
-                <ul>
-                    <li class="text-xl font-bold hover:text-blue-700"><a target="_blank"
+            <!-- Desktop Navigation -->
+            <nav id="desktop-nav" class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li class="text-lg font-medium hover:text-blue-700"><a href="#about">About</a></li>
+                    <li class="text-lg font-medium hover:text-blue-700"><a href="#projects">Projects</a></li>
+                    <li class="text-lg font-medium hover:text-blue-700"><a href="#skills">Skills</a></li>
+                    <li class="text-lg font-bold hover:text-blue-700"><a target="_blank"
                             href="https://github.com/ARK-dev-tech">GitHub</a>
                     </li>
                 </ul>
             </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-800 focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
         </header>
 
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="md:hidden bg-white mt-4 rounded-xl shadow-lg py-4 px-6 hidden">
+            <ul class="space-y-3">
+                <li class="text-lg font-medium hover:text-blue-700"><a href="#about">About</a></li>
+                <li class="text-lg font-medium hover:text-blue-700"><a href="#projects">Projects</a></li>
+                <li class="text-lg font-medium hover:text-blue-700"><a href="#skills">Skills</a></li>
+                <li class="text-lg font-bold hover:text-blue-700"><a target="_blank"
+                        href="https://github.com/ARK-dev-tech">GitHub</a>
+                </li>
+            </ul>
+        </div>
+
         <!--HERO SECTION-->
-        <section id="hero-section" class="bg-white shadow-lg mt-10 rounded-xl px-6 py-20 flex flex-col md:flex-row items-center justify-around">
+        <section id="hero-section" class="bg-white shadow-lg mt-6 md:mt-10 rounded-xl px-4 md:px-6 py-12 md:py-18 flex flex-col md:flex-row items-center justify-around">
 
             <!--Photo-->
-            <div class="flex-shrink-0 w-60 h-60 bg-white rounded-full shadow-xl">
-                <img src="/Portfolio-Website/photo-placeholder.svg" alt="Abdul Rafay Khan"
-                    class="w-60 h-60 rounded-full object-cover">
+            <div class="flex-shrink-0 w-32 h-32 md:w-60 md:h-60 bg-white rounded-full shadow-xl mb-6 md:mb-10">
+                <img src="/Portfolio-Website/my-picture.png" alt="Abdul Rafay Khan"
+                    class="w-32 h-32 md:w-60 md:h-60 rounded-full object-cover">
             </div>
 
             <!--Heading-->
-            <div class="text-center">
-                <h1 class="text-4xl font-bold mb-6">Web Developer</h1>
-                <p class="text-xl text-gray-600 mb-8">Building fun, modern, responsive web applications</p>
-                <div class="flex justify-center gap-4">
+            <div class="text-center md:text-left">
+                <h1 class="text-3xl md:text-4xl font-bold mb-4 md:mb-6">Web Developer</h1>
+                <p class="text-lg md:text-xl text-gray-600 mb-6 md:mb-8">Building Fun, Modern, Responsive Web Applications</p>
+                <!--Test Buttons
+                <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-3 md:gap-4">
                     <a href="#projects"
-                        class="bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700">My Work</a>
+                        class="bg-blue-600 text-white font-semibold px-5 py-2 md:px-6 md:py-3 rounded-lg hover:bg-blue-700 text-center">My Work</a>
                     <a href="#skills"
-                        class="bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700">My
+                        class="bg-blue-600 text-white font-semibold px-5 py-2 md:px-6 md:py-3 rounded-lg hover:bg-blue-700 text-center">My
                         Skills</a>
                 </div>
+                -->
             </div>
         </section>
 
         <!--ABOUT ME-->
-        <section id="about" class="bg-white shadow-lg mt-10 rounded-xl text-center px-4 py-12">
-            <h2 class="text-3xl font-bold mb-6">About Me</h1>
-                <p class="text-xl text-gray-600 px-16">I'm a passionate and creative web developer based in Karachi.
-                    Currently pursuing my Bachelor of Science in Computer Science, I am driven by a love for programming
-                    and building. I enjoy creating modern, user-friendly applications and am always eager to learn new
-                    technologies.</p>
+        <section id="about" class="bg-white shadow-lg mt-6 md:mt-10 rounded-xl text-center px-4 md:px-16 py-10 md:py-12">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 md:mb-6">About Me</h2>
+            <p class="text-base md:text-lg text-gray-600">I'm a passionate and creative web developer based in Pakistan.
+                Currently pursuing my Bachelors in Computer Science, I am driven by a love for programming
+                and learning. I enjoy creating modern, user-friendly applications and am always eager to explore new
+                technologies.</p>
         </section>
 
         <!--PROJECTS-->
-        <section id="projects" class="px-4 py-16">
-            <h2 class="text-3xl font-bold text-white text-center mt-16 mb-10">My Projects</h2>
+        <section id="projects" class="px-2 md:px-4 py-10 md:py-16">
+            <h2 class="text-2xl md:text-3xl font-bold text-white text-center mt-8 md:mt-16 mb-6 md:mb-10">My Projects</h2>
 
             <!--Project Card-->
-            <div class="project-card bg-white rounded-xl shadow-md px-6 py-6 mb-6">
-                <h3 class="project-head text-2xl font-bold mb-2">To-do List Application</h3>
-                <p class="project-desc text-gray-600 mb-4">Built a todo app to master core JavaScript concepts like DOM
+            <div class="project-card bg-white rounded-xl shadow-md px-4 md:px-6 py-4 md:py-6 mb-6">
+                <h3 class="project-head text-xl md:text-2xl font-bold mb-2">To-do List Application</h3>
+                <p class="project-desc text-gray-600 mb-4 text-sm md:text-base">Built a todo app to master core JavaScript concepts like DOM
                     manipulation and event handling. Implemented Local Storage to persist user data and focused on
                     creating a fully responsive, mobile-first design with Tailwind CSS.</p>
 
-                <div class="project-tech flex items-center gap-4 mb-4">
-                    <span class="bg-gray-200 rounded text-sm px-2 py-1">Vanilla JavaScript</span>
-                    <span class="bg-gray-200 rounded text-sm px-2 py-1">TailwindCSS</span>
-                    <span class="bg-gray-200 rounded text-sm px-2 py-1">Vite</span>
+                <div class="project-tech flex flex-wrap items-center gap-2 md:gap-4 mb-4">
+                    <span class="bg-gray-200 rounded text-xs md:text-sm px-2 py-1">Vanilla JavaScript</span>
+                    <span class="bg-gray-200 rounded text-xs md:text-sm px-2 py-1">TailwindCSS</span>
+                    <span class="bg-gray-200 rounded text-xs md:text-sm px-2 py-1">Vite</span>
                 </div>
 
-                <div class="project-links flex gap-4">
+                <div class="project-links flex flex-col sm:flex-row gap-3 md:gap-4">
                     <!--Project Github Link-->
                     <a href="https://github.com/ARK-dev-tech/To-do-List-App"
-                        class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-900">
+                        class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-900 text-center">
                         <i class="fab fa-github mr-2"></i>
                         Code
                     </a>
                     <!--Project Live Demo Link-->
                     <a href="https://ARK-dev-tech.github.io/To-do-List-App/"
-                        class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                        class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-center">
                         <i class="fas fa-external-link-alt mr-2"></i>
                         Live Demo
                     </a>
@@ -96,39 +123,38 @@
             </div>
 
             <!--Future Projects Placeholder-->
-            <div class="project-card-placeholder bg-white rounded-xl shadow-md px-6 py-6 mb-6 opacity-60">
-                <h3 class="text-2xl font-bold mb-2">Next Project Coming Soon</h3>
-                <p class="text-gray-600">Working on my next amazing project!</p>
+            <div class="project-card-placeholder bg-white rounded-xl shadow-md px-4 md:px-6 py-4 md:py-6 mb-6 opacity-60">
+                <h3 class="text-xl md:text-2xl font-bold mb-2">Next Project Coming Soon</h3>
+                <p class="text-gray-600 text-sm md:text-base">Working on my next amazing project!</p>
             </div>
         </section>
 
         <!--SKILLS-->
-        <section id="skills" class="px-4 py-4 mb-10">
+        <section id="skills" class="px-2 md:px-4 py-4 mb-8 md:mb-10">
 
-            <h2 class="text-white text-3xl font-bold text-center mb-10">My Skills</h2>
+            <h2 class="text-white text-2xl md:text-3xl font-bold text-center mb-6 md:mb-10">My Skills</h2>
 
-            <!--Note Add responsive for mobile-->
-            <div class="skill-cards grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div class="skill-cards grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6 text-center">
 
-                <div class="bg-white p-4 rounded-lg shadow-sm">
-                    <i class="fab fa-html5 text-orange-500 text-3xl mb-2"></i>
-                    <p>HTML5</p>
+                <div class="bg-white p-3 md:p-4 rounded-lg shadow-sm">
+                    <i class="fab fa-html5 text-orange-500 text-2xl md:text-3xl mb-2"></i>
+                    <p class="text-sm md:text-base">HTML5</p>
                 </div>
-                <div class="bg-white p-4 rounded-lg shadow-sm">
-                    <i class="fab fa-css3-alt text-blue-500 text-3xl mb-2"></i>
-                    <p>CSS3</p>
+                <div class="bg-white p-3 md:p-4 rounded-lg shadow-sm">
+                    <i class="fab fa-css3-alt text-blue-500 text-2xl md:text-3xl mb-2"></i>
+                    <p class="text-sm md:text-base">CSS3</p>
                 </div>
-                <div class="bg-white p-4 rounded-lg shadow-sm">
-                    <i class="fab fa-js-square text-yellow-500 text-3xl mb-2"></i>
-                    <p>JavaScript</p>
+                <div class="bg-white p-3 md:p-4 rounded-lg shadow-sm">
+                    <i class="fab fa-js-square text-yellow-500 text-2xl md:text-3xl mb-2"></i>
+                    <p class="text-sm md:text-base">JavaScript</p>
                 </div>
-                <div class="bg-white p-4 rounded-lg shadow-sm">
-                    <i class="fab fa-git-alt text-red-500 text-3xl mb-2"></i>
-                    <p>Git & GitHub</p>
+                <div class="bg-white p-3 md:p-4 rounded-lg shadow-sm">
+                    <i class="fab fa-git-alt text-red-500 text-2xl md:text-3xl mb-2"></i>
+                    <p class="text-sm md:text-base">Git & GitHub</p>
                 </div>
-                <div class="bg-white p-4 rounded-lg shadow-sm">
-                    <img src="/Portfolio-Website/tailwindcss-logo.svg" alt="Tailwind CSS Logo" class="w-10 h-10 mx-auto mb-1">
-                    <p>Tailwind CSS</p>
+                <div class="bg-white p-3 md:p-4 rounded-lg shadow-sm">
+                    <img src="/Portfolio-Website/tailwindcss-logo.svg" alt="Tailwind CSS Logo" class="w-8 h-8 md:w-10 md:h-10 mx-auto mb-1">
+                    <p class="text-sm md:text-base">Tailwind CSS</p>
                 </div>
 
             </div>
@@ -136,30 +162,41 @@
         </section>
 
         <!--CONTACT-->
-        <section class="px-6 py-16 text-center">
+        <section class="px-4 md:px-6 py-12 md:py-16 text-center">
 
-            <h2 class="text-3xl text-white font-bold mb-8">Contact Me</h2>
+            <h2 class="text-2xl md:text-3xl text-white font-bold mb-6 md:mb-8">Contact Me</h2>
 
-            <!--Note Add responsive for mobile-->
             <div class="max-w-md mx-auto">
                 <a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=official.ark.dev@gmail.com"
-                    class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 inline-block">
+                    class="bg-blue-600 text-white px-6 md:px-8 py-2 md:py-3 rounded-lg hover:bg-blue-700 inline-block">
                     <i class="fas fa-envelope mr-2"></i>
                     Email Me
                 </a>
             </div>
         </section>
 
-
-
-
     </div>
 
     <!--FOOTER-->
-    <footer class="bg-gray-800 text-white py-8 text-center">
-        <p>Copyright &copy; 2025 Abdul Rafay Khan</p>
-        <p>ARK.dev.tech</p>
+    <footer class="bg-gray-800 text-white py-6 md:py-8 text-center">
+        <p class="text-sm md:text-base">Copyright &copy; 2025 Abdul Rafay Khan</p>
+        <p class="text-sm md:text-base">ARK.dev.tech</p>
     </footer>
+
+    <script>
+        // Mobile menu toggle functionality
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+    </script>
 </body>
 
 </html>
